@@ -32,7 +32,7 @@ use this body:
 
 
 ## Spring
-To test it run the command: make run-spring and call localhost:808
+To test it run the command: make run-spring and call localhost:8080
 
 ### GET /mfa/setup
 Returns the QRCode
