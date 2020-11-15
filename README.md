@@ -4,7 +4,8 @@
 A repo for storing 2fa for multiple different programming languages.
 
 See Makefile for run different commands like
-* start nodejs server
+* run-nodejs
+* run-spring
 
 ## NodeJs
 
