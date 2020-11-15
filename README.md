@@ -32,6 +32,7 @@ use this body:
 
 
 ## Spring
+Uses totp (https://mvnrepository.com/artifact/dev.samstevens.totp/totp-spring-boot-starter)
 To test it run the command: make run-spring and call localhost:8080
 
 ### GET /mfa/setup
