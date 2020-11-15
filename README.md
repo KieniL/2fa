@@ -45,3 +45,11 @@ use this body:
     "token": "Code from app",
     "secret": "FILL IN SECRET (In reallife parameter should be a userId or something)"
 }
+
+## Flask
+Cloned from https://github.com/miguelgrinberg/two-factor-auth-flask
+To install dependencies use command make install-dependencies
+To test the app use command make-run-flask and go to localhost:5000
+
+It shows register and login. After registration the qrcode is shown for scanning.
+The qrCode will be created in the userobject in the method get_totp_uri
