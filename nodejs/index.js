@@ -40,7 +40,10 @@ app.post("/api/register", (req, res) => {
     // Send user id and base32 key to user
 
 
-    QRCode.toDataURL(temp_secret.otpauth_url, function (err, data_url) {
+    var auth_url = speakeasy.otpauthURL({ secret: temp_secret.base32, label: 'Name of Secret',
+    algorithm: 'sha512', issuer:'nodejs', digits: 6, encoding: 'base32' });
+
+    QRCode.toDataURL(auth_url, function (err, data_url) {
       res.json({ id, secret: temp_secret.base32, qrCode: data_url, msg: 'Please scan with your authenticator app' })
     })
 

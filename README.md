@@ -8,8 +8,8 @@ See Makefile for run different commands like
 
 ## NodeJs
 
-Uses express, speakeasy and uuid to implement the 2fa with speakeasy to use google authenticator
-
+Uses express, speakeasy and uuid to implement the 2fa with speakeasy to use google authenticator.<br/>
+To test it run the command: make run-nodejs and call localhost:3000
 ### /api/register:
 Used for registration. Returns the base64 encoded string for the qrCode.
 
