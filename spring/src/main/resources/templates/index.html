@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Login</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <br />
+    <h1>profile </h1>
+    <div class="container">
+        <button type="submit" onclick="callREST()">Register</button>
+    </div>
+
+    <div id="response"></div>
+    <script>
+        function callREST() {
+            $.get("/mfa/setup", function (data) {
+                console.log(data);
+                var image = new Image();
+                image.src = data.qrCode;
+                $("#response").html(image);
+            });
+        }
+    </script>
+</body>
+
+</html>

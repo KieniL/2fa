@@ -10,12 +10,36 @@ See Makefile for run different commands like
 
 Uses express, speakeasy and uuid to implement the 2fa with speakeasy to use google authenticator.<br/>
 To test it run the command: make run-nodejs and call localhost:3000
-### /api/register:
+### POST /api/register:
 Used for registration. Returns the base64 encoded string for the qrCode.
 
-### /api/verify:
+### POST /api/verify:
 Use this to verify the mfa so that the tempsecret is stored permanently (only on registration)
+use this body:
+{
+    "userId": "USERID from Creation",
+    "token": "Code from app"
+}
 
-
-### /api/validate:
+### POST /api/validate:
 Use this to validate the mfa on login
+use this body:
+{
+    "userId": "USERID from Creation",
+    "token": "Code from app"
+}
+
+
+
+## Spring
+To test it run the command: make run-spring and call localhost:808
+
+### GET /mfa/setup
+Returns the QRCode
+
+### POST /mfa/verify:
+use this body:
+{
+    "token": "Code from app",
+    "secret": "FILL IN SECRET (In reallife parameter should be a userId or something)"
+}
