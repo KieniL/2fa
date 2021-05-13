@@ -58,7 +58,7 @@ To test the app use command make-run-flask and go to localhost:5000
 It shows register and login. After registration the qrcode is shown for scanning.
 The qrCode will be created in the userobject in the method get_totp_uri
 
-##SSH
+## SSH
 See https://github.com/KieniL/AWSTemplates/tree/master/jumphost-hardening.
 This repo creates a bastion host and shows the commands needs to be taken for google-authenticator
 
